@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form enctype="multipart/form-data" method="post" action="process_form.php">
+
+    <!--LEVEL 1: DEVTYPE--><br>
+
+    <label><input type="radio" onclick="show_devtype(this.value)" name="devtype" value="game">Gamedevelopment</label><br>
+    <label><input type="radio" onclick="show_devtype(this.value)" name="devtype" value="app">Appdevelopment</label><br>
+    <label><input type="radio" onclick="show_devtype(this.value)" name="devtype" value="web">Webdevelopment</label><br>
+
+    <!--LEVEL 2: TECHNIQUE--><br>
+
+        <!--GAMETYPE-->
+        <label class="level2 game hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="unity">Unity</input></label>
+        <label class="level2 game hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="unreal">Unreal</input></label>
+        <label class="level2 game hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="other">Other</input></label>
+        <!--APPTYPE-->
+        <label class="level2 app hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="apptype 1">Apptype 1</input></label>
+        <label class="level2 app hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="apptype 2">Apptype 2</input></label>
+        <label class="level2 app hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="apptype 3">Apptype 3</input></label>
+        <!--WEBTYPE-->
+        <label class="level2 web hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="web 1">Web 1</input></label>
+        <label class="level2 web hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="web 2">Web 2</input></label>
+        <label class="level2 web hidden"><input type="radio" onclick="show_levels_3_and_4()" name="technique" value="web 3">Web 3</input></label>
+
+    <!--LEVEL 3: NAME--><br><br>
+
+    <label class="level3 hidden">Name of project: <input name="name"></label>
+
+    <!--LEVEL 4: DETAILS--><br>
+
+    <label class="level4 hidden">Description: <input name="description"></label><br>
+    <label class="level4 hidden">Gitlink: <input name="gitlink"></label><br>
+    <label class="level4 hidden">Productlink: <input name="productlink"></label><br>
+    <label class="level4 hidden">Collaborators: <input name="collaborators"></label><br>
+    <label class="level4 hidden">Gif: <input type="file" name="gif"></label><br>
+    <label class="level4 hidden">Image: <input type="file" name="image"></label><br>
+
+    <input class="level4 hidden" type="submit" name="submit" value="SAVE">
+
+</form>
+<script src="formfunctions.js"></script>
+</body>
+</html>
+
+
